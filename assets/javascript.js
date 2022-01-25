@@ -16,7 +16,9 @@ for(item of buttons){
         else if(buttonText == '='){
            screen.value = eval(screenValue)           
         }else if(buttonText == "Back"){
-            screen.value = screenValue.length-1;
+            screenValue = screenValue.slice(0, screenValue.length - 1);
+            screen.value=screenValue;
+            console.log(screenValue);
         }
         else{
             screenValue += buttonText;

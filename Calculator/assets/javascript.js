@@ -16,7 +16,8 @@ for(item of buttons){
         else if(buttonText == '='){
            screen.value = eval(screenValue)           
         }else if(buttonText == "Back"){
-            screen.value = screenValue.length-1;
+           
+            screen.value = screenValue.value.slice(0, screenValue.value.length -1)
         }
         else{
             screenValue += buttonText;
